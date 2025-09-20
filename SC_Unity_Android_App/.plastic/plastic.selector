@@ -1,0 +1,4 @@
+repository "SC_Unity_Android_App/SC_Unity_Android_App@14569680632487@cloud"
+  path "/"
+    br "/main"
+    co "/main"

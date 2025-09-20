@@ -1,0 +1,8 @@
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/.utmp/RelWithDebInfo/1a2q2s5v/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/.utmp/RelWithDebInfo/1a2q2s5v/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/.utmp/RelWithDebInfo/1a2q2s5v/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/.utmp/RelWithDebInfo/1a2q2s5v/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/.utmp/RelWithDebInfo/1a2q2s5v/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/.utmp/RelWithDebInfo/1a2q2s5v/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/.utmp/RelWithDebInfo/1a2q2s5v/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/.utmp/RelWithDebInfo/1a2q2s5v/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
