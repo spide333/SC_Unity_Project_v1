@@ -1,0 +1,3 @@
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing/CMakeLists.txt
+/Users/user/SC_Unity_Project_v1/SC_Unity_Android_App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt
