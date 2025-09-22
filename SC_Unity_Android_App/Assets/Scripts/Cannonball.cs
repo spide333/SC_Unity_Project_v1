@@ -5,7 +5,7 @@ public class Cannonball : MonoBehaviour
 {
     [Header("Cannonball Settings")]
     public float damage = 10f;              // 데미지
-    public float explosionRadius = 3f;      // 폭발 반경 (더 크게 설정)
+    public float explosionRadius = 1.5f;    // 폭발 반경 (적당한 크기로 조정)
     public GameObject explosionEffect;      // 폭발 이펙트 (옵션)
     public AudioClip explosionSound;       // 폭발 사운드 (옵션)
     public LayerMask targetLayers = -1;     // 타겟 레이어

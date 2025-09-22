@@ -52,7 +52,7 @@ public class CannonController : MonoBehaviour
             Debug.Log("🔧 FirePoint 자동 생성 중...");
             GameObject firePointObj = new GameObject("FirePoint");
             firePointObj.transform.SetParent(transform);
-            firePointObj.transform.localPosition = new Vector3(1f, 0f, 0f); // 대포 앞쪽 (오른쪽)
+            firePointObj.transform.localPosition = new Vector3(1.5f, 0.7f, 0f); // 대포 오른쪽 상단
             firePoint = firePointObj.transform;
             Debug.Log("✅ FirePoint 생성 완료!");
         }
@@ -127,7 +127,7 @@ public class CannonController : MonoBehaviour
             else
             {
                 float distance = Vector3.Distance(mouseWorldPos, transform.position);
-                Debug.Log($"❌ 대포 클릭 실패. 거리: {distance:F2} (필요: 3.0 이하)");
+                Debug.Log($"❌ 대포 클릭 실패. 거리: {distance:F2} (필요: 2.0 이하)");
                 Debug.Log("💡 힌트: Inspector에서 'Click Anywhere To Fire' 체크하면 화면 아무 곳이나 클릭해도 발사됩니다!");
             }
         }
@@ -137,7 +137,7 @@ public class CannonController : MonoBehaviour
     {
         // 대포와의 거리 체크 (간단한 방법)
         float distance = Vector3.Distance(worldPos, transform.position);
-        return distance < 3f; // 3유닛 이내면 클릭으로 인정 (더 크게)
+        return distance < 2f; // 2유닛 이내면 클릭으로 인정 (정확한 클릭)
     }
     
     Vector3 GetFireDirection()
@@ -179,7 +179,7 @@ public class CannonController : MonoBehaviour
         
         // 고정된 방향과 힘으로 발사
         Vector3 direction = GetFireDirection();
-        Vector3 spawnPosition = firePoint != null ? firePoint.position : transform.position + Vector3.right;
+        Vector3 spawnPosition = firePoint != null ? firePoint.position : transform.position + new Vector3(1.5f, 0.7f, 0f);
         
         Debug.Log($"🎯 발사 위치: {spawnPosition}");
         Debug.Log($"➡️ 발사 방향: {direction}");
@@ -239,16 +239,19 @@ public class CannonController : MonoBehaviour
     
     void OnDrawGizmos()
     {
-        // Scene 뷰에서 firePoint 표시
-        if (firePoint != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(firePoint.position, 0.2f);
-            
-            // 발사 방향 표시
-            Vector3 direction = GetFireDirection();
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawRay(firePoint.position, direction * 2f);
-        }
+        // Scene 뷰에서 firePoint 표시 (대포 오른쪽 상단)
+        Vector3 firePos = firePoint != null ? firePoint.position : transform.position + new Vector3(1.5f, 0.7f, 0f);
+        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(firePos, 0.2f);
+        
+        // 발사 방향 표시
+        Vector3 direction = GetFireDirection();
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawRay(firePos, direction * 3f);
+        
+        // 대포 범위 표시 (클릭 감지 범위)
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, 2f);
     }
 }

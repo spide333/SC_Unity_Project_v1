@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  explosionRadius: 3
+  explosionRadius: 1.5
   explosionEffect: {fileID: 0}
   explosionSound: {fileID: 0}
   targetLayers:
